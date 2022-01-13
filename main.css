@@ -1,0 +1,553 @@
+@import url('https://fonts.googleapis.com/css?family=Cabin+Sketch:700|Fredericka+the+Great|Londrina+Sketch&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 2vw;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  max-height: 100%;
+  background-image: url(img/background.webp);
+  background-color: #000;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8,1fr);
+}
+
+.logo {
+  grid-area: 1 / 1 / 3 / 3;
+  justify-self: center;
+  align-self: center;
+  position: relative;
+  height: auto;
+  width: auto;
+  max-height: 85%;
+  max-width: 85%;
+}
+
+header {
+  grid-area: 1 / 3 / 2 / 11;
+  display: flex;
+  justify-content: center;
+}
+
+.default-header {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  position: relative;
+  width: 100%;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+}
+
+.school-link {
+  justify-self: center;
+  align-self: center;
+  cursor: pointer;
+  text-align: center;
+  font-family: Cabin Sketch, sans-serif;
+  font-size: 2em;
+  padding: 0;
+  margin: 0;
+  text-shadow:  .05em .05em 0 #0468a4,
+                .04em .04em 0 #0468a4,
+                .03em .03em 0 #0468a4,
+                .02em .02em 0 #0468a4,
+                .01em .01em 0 #0468a4;
+}
+
+.school-link:hover {
+  animation: small-shake 1.25s infinite linear;
+}
+
+.school-header {
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  position: relative;
+  width: 100%;
+}
+
+.school-logo {
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  font-size: 2em;
+  margin: 0;
+  padding: 0;
+  font-family: Londrina Sketch, sans-serif;
+}
+
+.teacher {
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  cursor: pointer;
+  font-family: Cabin Sketch, sans-serif;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  text-shadow:  .05em .05em 0 #0468a4,
+                .1em .1em 0 #0468a4,
+                .075em .075em 0 #0468a4,
+                .025em .025em 0 #0468a4;
+}
+
+.school-doc {
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  cursor: pointer;
+  font-family: Cabin Sketch, sans-serif;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  text-shadow:  .05em .05em 0 #0468a4,
+                .1em .1em 0 #0468a4,
+                .075em .075em 0 #0468a4,
+                .025em .025em 0 #0468a4;
+}
+
+.school-subject {
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+  cursor: pointer;
+  font-family: Cabin Sketch, sans-serif;
+  font-size: .75em;
+  margin: 0;
+  padding: 0;
+  text-shadow:  .05em .05em 0 #0468a4,
+                .1em .1em 0 #0468a4,
+                .075em .075em 0 #0468a4,
+                .025em .025em 0 #0468a4;
+}
+
+.teacher:hover, .school-doc:hover, .school-subject:hover {
+  animation: small-shake 1.25s infinite linear;
+}
+
+.schools {
+  grid-area: 1 / 11 / 2 / 13;
+  justify-self: center;
+  align-self: center;
+  position: relative;
+  font-family: Cabin Sketch, sans-serif;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.schools:hover {
+  animation: small-shake 1.25s infinite linear;
+}
+
+.link-list {
+  grid-area: 3 / 1 / 9 / 3;
+  display: flex;
+  border: 10px solid transparent;
+  -webkit-border-image: url(img/border.webp) 20 round; /* Safari */
+       -o-border-image: url(img/border.webp) 20 round; /* Opera */
+          border-image: url(img/border.webp) 20 round;
+  display: grid;
+  grid-auto-rows: auto;
+  position: relative;
+  width: 100%;
+}
+
+.list-link-wrapper:not(:last-child) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: .25vh solid transparent;
+  -webkit-border-image: url(img/line.webp); /* Safari */
+       -o-border-image: url(img/line.webp); /* Opera */
+          border-image: url(img/line.webp) 90 / 0 0 .25vh 0;
+}
+
+.list-link-wrapper:last-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.link-list a, .link-list button {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  font-family: Fredericka the Great, sans-serif;
+  font-size: .65em;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+.link-list a:hover, .link-list button:hover {
+  animation: small-shake 1.25s infinite linear;
+}
+
+.main-links {
+  grid-area: 2 / 3 / 9 / 13;
+  display: grid;
+  grid-template-rows: auto;
+  min-width: 0;
+  min-height: 0;
+  padding: 1em;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, 1fr); /* 10.9vh */
+  grid-gap: .5em;
+  overflow: hidden;
+  min-width: 0;
+  min-height: 0;
+}
+
+.main-links-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(8, 1fr); /* 10.9vh */
+  grid-gap: .5em;
+  overflow: hidden;
+  min-width: 0;
+  min-height: 0;
+}
+
+.main-link {
+  display: block;
+  height: 95%;
+  width: 95%;
+  justify-self: center;
+  align-self: center;
+  max-height: 100%;
+  max-width: 100%;  
+  overflow: hidden;
+  cursor: pointer;
+  font-size: 0;
+}
+
+.main-link:hover {
+  animation: small-shake 1.25s infinite linear;
+}
+
+#google-drive {
+  grid-area: 1 / 1 / 3 / 4;
+  background: url(img/google-drive.webp) no-repeat center;
+  background-size: contain;
+}
+
+#google-docs {
+  grid-area: 1 / 10 / 3 / 13;
+  background: url(img/google-docs.webp) no-repeat center;
+  background-size: contain;
+}
+
+#google-classroom {
+  grid-area: 4 / 4 / 6 / 6;
+  background: url(img/google-classroom.webp) no-repeat center;
+  background-size: contain;
+}
+
+#abcya {
+  grid-area: 1 / 4 / 2 / 8;
+  background: url(img/abcya.png) no-repeat center;
+  background-size: contain;
+}
+
+#brain-pop {
+  grid-area: 6 / 7 / 9 / 9;
+  background: url(img/brain-pop.webp) no-repeat center;
+  background-size: contain;
+}
+
+#brain-popjr {
+  grid-area: 7 / 5 / 9 / 7;
+  background: url(img/brain-popjr.webp) no-repeat center;
+  background-size: contain;
+}
+
+#digits {
+  grid-area: 6 / 9 / 8 / 13;
+  background: url(img/digits.webp) no-repeat center;
+  background-size: contain;
+}
+
+#mathxl {
+  grid-area: 6 / 9 / 9 / 13;
+  background: url(img/MathXL.webp) no-repeat center;
+  background-size: contain;
+}
+
+#edmodo {
+  grid-area: 8 / 1 / 9 / 5;
+  background: url(img/edmodo.webp) no-repeat center;
+  background-size: contain;
+}
+
+#go-math {
+  grid-area: 4 / 1 / 6 / 4;
+  background: url(img/go-math.webp) no-repeat center;
+  background-size: contain;
+}
+
+#pearson {
+  grid-area: 8 / 9 / 9 / 13;
+  background: url(img/pearson.webp) no-repeat center;
+  background-size: contain;
+}
+
+#prodigy {
+  grid-area: 2 / 4 / 3 / 8;
+  background: url(img/prodigy.webp) no-repeat center;
+  background-size: contain;
+}
+
+#raz-kids {
+  grid-area: 5 / 8 / 6 / 11;
+  background: url(img/raz-kids.webp) no-repeat center;
+  background-size: contain;
+}
+
+#starfall {
+  grid-area: 6 / 4 / 7 / 7;
+  background: url(img/starfall.webp) no-repeat center;
+  background-size: contain;
+}
+
+#clever {
+  grid-area: 6 / 1 / 7 / 4;
+  background: url(img/clever.webp) no-repeat center;
+  background-size: contain;
+}
+
+#xtra-math {
+  grid-area: 7 / 1 / 8 / 5;
+  background: url(img/xtra-math.webp) no-repeat center;
+  background-size: contain;
+}
+
+#powerschool {
+  grid-area: 1 / 8 / 4 / 10;
+  background: url(img/ps.webp) no-repeat center;
+  background-size: contain;
+}
+
+#world-book {
+  grid-area: 3 / 11 / 6 / 13;
+  background: url(img/world-book.png) no-repeat center;
+  background-size: contain;
+}
+
+#ixl {
+  grid-area: 4 / 8 / 5 / 11;
+  background: url(img/ixl.webp) no-repeat center;
+  background-size: contain;
+}
+
+#schoology {
+  grid-area: 3 / 1 / 4 / 8;
+  background: url(img/schoology.webp) no-repeat center;
+  background-size: contain;
+}
+
+#gmail {
+  grid-area: 4 / 6 / 6 / 8;
+  background: url(img/gmail.webp) no-repeat center;
+  background-size: contain;
+}
+
+#studysync {
+  grid-area: 8 / 1 / 9 / 5;
+  background: url(img/studysync.webp) no-repeat center;
+  background-size: contain;
+}
+
+#teacher-frame {
+  grid-area: 1 / 1 / 9 / 13;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 1px);
+  transform: translate3d(0, 0, 1px);
+}
+
+#iframe {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: white;
+  text-align: center;
+}
+
+.exit {
+  position: absolute;
+  margin: 0;
+  top: 2vh;
+  right: 2vw;
+  color: red;
+  font-size: 2em;
+  cursor: pointer;
+  font-family: Cabin Sketch, sans-serif;
+}
+
+.exit:hover {
+  animation: small-shake 1.25s infinite linear;
+}
+
+@keyframes small-shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -1px) rotate(-1deg); }
+  20% { transform: translate(-1px, 0px) rotate(1deg); }
+  30% { transform: translate(1px, 1px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 1px) rotate(-1deg); }
+  60% { transform: translate(-1px, 1px) rotate(0deg); }
+  70% { transform: translate(1px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 1px) rotate(0deg); }
+  100% { transform: translate(1px, -1px) rotate(-1deg); }
+}
+
+@media only screen and (max-width: 1000px) {
+
+  main {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    gap: 1em;
+  }
+  
+  header {
+    grid-area: 1 / 3 / 2 / 8;
+  }
+
+  .school-logo {
+    font-size: 2em;
+  }
+  
+  .schools {
+    grid-area: 1 / 8 / 2 / 9;
+    font-size: 1em;
+  }
+  
+  .link-list {
+    grid-area: 3 / 1 / 13 / 3;
+  }
+
+  .default-list a, .default-list p {
+    font-size: 1.25em;
+  }
+  
+  .main-links {
+    grid-area: 2 / 3 / 13 / 9;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows:  repeat(12, 1fr);
+  }
+
+  .links-header-img {
+    font-size: 1em;
+  }
+
+  #google-drive {
+    grid-area: 1 / 1 / 4 / 4;
+  }
+
+  #google-classroom {
+    grid-area: 5 / 3 / 8 / 7;
+  }
+
+  #google-docs {
+    grid-area: 2 / 6 / 5 / 9;
+  }
+
+  #abcya {
+    grid-area: 7 / 1 / 8 / 3;
+  }
+
+  #brain-pop {
+    grid-area: 5 / 7 / 8 / 9;
+  }
+
+  #brain-popjr {
+    grid-area: 8 / 7 / 10 / 9;
+  }
+
+  #digits {
+    grid-area: 5 / 1 / 7 / 3;
+  }
+
+  #mathxl {
+    grid-area: 5 / 1 / 7 / 3;
+  }
+
+  #edmodo {
+    grid-area: 4 / 1 / 5 / 3;
+  }
+
+  #studysync {
+    grid-area: 4 / 1 / 5 / 3;
+  }
+
+  #go-math {
+    grid-area: 2 / 4 / 4 / 6;
+  }
+
+  #pearson {
+    grid-area: 10 / 5 / 11 / 7;
+  }
+
+  #prodigy {
+    grid-area: 1 / 4 / 2 / 7;
+  }
+
+  #raz-kids {
+    grid-area: 10 / 1 / 13 / 3;
+  }
+
+  #starfall {
+    grid-area: 8 / 3 / 10 / 5;
+  }
+
+  #clever {
+    grid-area: 8 / 5 / 10 / 7;
+  }
+
+  #xtra-math {
+    grid-area: 8 / 1 / 10 / 3;
+  }
+
+  #powerschool {
+    grid-area:  1 / 7 / 2 / 9;
+  }
+
+  #world-book {
+    grid-area: 11 / 5 / 13 / 7;
+  }
+
+  #ixl{
+    grid-area: 11 / 7 / 13 / 9;
+  }
+
+  #schoology {
+    grid-area: 4 / 3 / 5 / 6;
+  }
+
+  #gmail {
+    grid-area: 10 / 3 / 13 / 5;
+  }
+
+  #teacher-frame {
+    grid-area: 1 / 1 / 13 / 9;
+  }
+
+}

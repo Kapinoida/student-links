@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-141522274-9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-141522274-9');
+  </script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="Minooka CCSD 201's student links homepage. Minooka Arrow." />
+  <title>Minooka Student Links</title>
+
+  <link rel="icon" type="image/png" href="img/min.webp">
+  <link rel="stylesheet" href="main.css">
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+
+  <script type="text/javascript" src="main.js"></script>
+  <base target="_blank">
+</head>
+
+<body>
+  <main>
+    <img class="logo" src="img/min201-logo.webp" alt="MIN201" width="200px" height="200px" />
+
+    <header>
+
+      <!-- Default header with all schools -->
+      <nav class="default-header">
+
+        <button class="school-link" id="as">AUX</button>
+        <button class="school-link" id="jes">JES</button>
+        <button class="school-link" id="mes">MES</button>
+        <button class="school-link" id="mis">MIS</button>
+        <button class="school-link" id="mjhs">MJHS</button>
+        <button class="school-link" id="wt">WT</button>
+
+      </nav>
+
+      <!-- School specific header dynamically created. Defaulted to not display -->
+      <nav class="school-header" style="display: none;"></nav>
+
+    </header>
+
+    <!-- Iframe that appears for teacher and tech links -->
+    <section id="teacher-frame" style="display: none;">
+      <iframe id="iframe" src=""></iframe>
+      <button class="exit">X</button>
+    </section>
+
+    <!-- Schools button that apperas when school header is used. Default to hidden -->
+    <button class="schools" style="display: none;">Schools</button>
+
+    <!-- Main link section. Links are created here, image is put in through CSS with the specific ID. Refer to CSS for grid placement. -->
+    <section class="main-links">
+        <button class="main-link" id="google-drive" onclick="window.open('https://drive.google.com','_blank')">Google Drive</button>
+        <!-- <div tabindex="0" class="main-link" id="google-drive" onclick="window.open('https://drive.google.com','_blank')"></div> -->
+        <button class="main-link" id="abcya" onclick="window.open('http://abcya.com','_blank')">abcya</button>
+        <button class="main-link" id="prodigy" onclick="window.open('https://prodigygame.com/play/','_blank')">Prodigy</button>
+        <button class="main-link" id="schoology" onclick="window.open('https://min201.schoology.com/','_blank')">Schoology</button>
+        <button class="main-link" id="powerschool" onclick="window.open('https://classroom.powerschool.com','_blank')">PowerSchool</button>
+        <button class="main-link" id="google-docs" onclick="window.open('https://docs.google.com','_blank')">Google Docs</button>
+        <button class="main-link" id="go-math" onclick="window.open('https://www-k6.thinkcentral.com/sp/access?sp=tc&connection=min201-org','_blank')">Go Math</button>
+        <button class="main-link" id="google-classroom" onclick="window.open('https://classroom.google.com/min201.org','_blank')">Google Classroom</button>
+        <button class="main-link" id="gmail" onclick="window.open('https://mail.google.com','_blank')">Gmail</button>
+        <button class="main-link" id="ixl" onclick="window.open('https://clever.com/in/min201','_blank')">IXL</button>
+        <button class="main-link" id="raz-kids" onclick="window.open('https://clever.com/in/min201','_blank')">Raz-Kids</button>
+        <button class="main-link" id="world-book" onclick="window.open('https://www.worldbookonline.com/wb/products?ed=all&gr=Welcome+Minooka+Cmty+Cons+Sch+Dist+201%21','_blank')">World Book</button>
+        <button class="main-link" id="clever" onclick="window.open('https://clever.com/in/min201','_blank')">Clever</button>
+        <button class="main-link" id="starfall" onclick="window.open('http://starfall.com','_blank')">Starfall</button>
+        <button class="main-link" id="studysync" onclick="window.open('https://clever.com/in/min201','_blank')">Study Sync</button>
+        <button class="main-link" id="brain-popjr" onclick="window.open('https://clever.com/in/min201','_blank')">Brain Pop Jr</button>
+        <button class="main-link" id="brain-pop" onclick="window.open('https://clever.com/in/min201','_blank')">Brain Pop</button>
+        <button class="main-link" id="mathxl" onclick="window.open('https://sso.rumba.pearsoncmg.com/sso/login?service=https://k12integrations.pearsoncmg.com/ca/dashboard.htm&idpmetadata=https://www.min201.org','_blank')">My World Interactive Envision Mathematics MathXL for Schools</button>
+        <!--<div class="main-link" id="digits" onclick="window.open('https://sso.rumba.pearsoncmg.com/sso/login?service=https://k12integrations.pearsoncmg.com/ca/dashboard.htm&idpmetadata=https://www.min201.org','_blank')"></div>-->
+        <!--<div class="main-link" id="edmodo" onclick="window.open('https://www.edmodo.com/','_blank')"></div>-->
+        <!--<div class="main-link" id="pearson" onclick="window.open('https://sso.rumba.pearsoncmg.com/sso/login?service=https://k12integrations.pearsoncmg.com/ca/dashboard.htm&idpmetadata=https://www.min201.org','_blank')"></div>-->
+        <!--<div class="main-link" id="xtra-math" onclick="window.open('https://xtramath.org/#/signin/classroom','_blank')"></div>-->
+    </section>
+
+    <!-- The side link menu with other links that would change more easily. No graphics required. Keep the count as low as possible for easy adding and subtracting later on -->
+    <aside class="link-list">
+        <!--<div class="list-link-wrapper"><a href="https://app.edgenuity.com/?code=1726310">My Path</a></div>-->
+        <div class="list-link-wrapper"><a href="https://www.edgenuity.com/login/">Edgenuity</a></div>
+        <div class="list-link-wrapper"><a href="https://www.min201.org/parents/remote-instruction-help">Parent/Student Remote Tech Help</a></div>
+        <div class="list-link-wrapper"><a href="https://min201.org">Minooka 201 Homepage</a></div>
+        <div class="list-link-wrapper"><a href="https://library.min201.org">Minooka 201 Library</a></div>
+        <!--<div class="list-link-wrapper"><a href="https://survey.5-essentials.org/illinois/survey/student/login/">5 Essentials Student Survey</a></div>-->
+        <div class="list-link-wrapper"><a href="https://test.mapnwea.org/#/nopopup">Secure Browser for MAP</a></div>
+        <div class="list-link-wrapper"><a href="https://min201.org/login">Minooka Teacher Links</a></div>
+        <div class="list-link-wrapper"><button class="dropdown" href="https://docs.google.com/document/d/e/2PACX-1vRTwyr0IHl10qpFx1z76xajyEJeb71UVDTeRP4kckJ5KjC1Na-rBF7BmCltwiHJT-81pzrJA-8wF974/pub">Student Resources</button></div>
+        <div class="list-link-wrapper"><a href="https://skillsnav.mapnwea.org">MAP Skills</a></div>
+        <!--<div class="list-link-wrapper"><a href="https://mc.esparklearning.com/users/sign_in">Espark Learning</a></div>-->
+        <div class="list-link-wrapper"><a href="https://www.min201.org/our-district/national-suicide-prevention-lifeline">National Suicide Prevention Lifeline</a></div>
+    </aside>
+  </main>
+</body>
+
+</html>
